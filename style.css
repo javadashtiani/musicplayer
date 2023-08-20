@@ -1,0 +1,88 @@
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(54, 53, 53);
+        font-family: monospace;
+      }
+      .player-box {
+        width: 300px;
+        height: 200px;
+        background-color: #d1d5db;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .img-audio {
+        position: absolute;
+        bottom: 80%;
+        left: 25%;
+      }
+      .img-audio > img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      .animate-image {
+        animation: animateImage linear infinite alternate 1s;
+      }
+      @keyframes animateImage {
+        0% {
+          transform: translateY(5px);
+        }
+        100% {
+          transform: translateY(-5px);
+        }
+      }
+      .audio-title-box {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px 0;
+        margin-bottom: 15px;
+      }
+      .time-line {
+        width: 80%;
+        height: 4px;
+        background-color: #000;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .time-line > .circle {
+        position: absolute;
+        width: 0%;
+        height: 4px;
+        background-color: #fff;
+        transition: 0.1s;
+      }
+      .buttons {
+        margin-top: 40px;
+        display: flex;
+        gap: 0 15px;
+      }
+      .buttons > * {
+        cursor: pointer;
+      }
+      .show-time {
+        margin-top: 15px;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .show-time > * {
+        font-size: 10px;
+      }
